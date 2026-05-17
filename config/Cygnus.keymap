@@ -103,10 +103,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &kp LEFT_ARROW  &trans          &kp RIGHT_ARROW  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &kp DOWN        &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &kp END         &kp DOWN_ARROW  &kp PAGE_DOWN    &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                                   &kp RS(ENTER)
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                                &trans       &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans           &trans       &kp LEFT_ARROW  &trans          &kp RIGHT_ARROW  &trans
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &kp DOWN        &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans           &trans       &kp END         &kp DOWN_ARROW  &kp PAGE_DOWN    &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans      &kp LS(LC(TAB))  &kp LC(TAB)                                                   &kp RS(ENTER)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -114,10 +114,10 @@
 
         MOUSE {
             bindings = <
-&trans       &trans       &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp LC(W)                         &kp LC(W)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans     &trans
-&lt 6 SPACE  &lt 5 SPACE  &mkp LCLK        &mkp RCLK          &mkp MCLK  &trans         &trans  &mkp MB1   &mkp LCLK        &mkp MCLK          &mkp RCLK  &trans
-&trans       &trans       &trans           &trans             &trans     &mkp RCLK      &trans  &trans     &mkp MB4         &mkp MB5           &trans     &trans
-&trans       &trans       &trans           &trans             &trans     &trans         &trans  &trans                                                    &trans
+&trans       &trans       &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp LC(W)                                         &kp LC(W)                &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans     &trans
+&lt 6 SPACE  &lt 5 SPACE  &mkp LCLK        &mkp RCLK          &mkp MCLK  &trans         &trans                  &mkp MB1                 &mkp LCLK        &mkp MCLK          &mkp RCLK  &trans
+&trans       &trans       &trans           &trans             &trans     &mkp RCLK      &trans                  &trans                   &mkp MB4         &mkp MB5           &trans     &trans
+&trans       &trans       &trans           &trans             &trans     &trans         &kp LS(LG(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))                                                 &trans
             >;
         };
 
