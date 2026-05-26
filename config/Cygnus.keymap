@@ -45,6 +45,13 @@
             bindings = <&kp N0 &kp N1 &kp N4 &kp N5 &kp N3 &kp N6>;
             label = "NEW_MACRO2";
         };
+
+        new_macro3: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp DOWN_ARROW &kp DOWN_ARROW &kp RET>;
+            label = "NEW_MACRO";
+        };
     };
 
     behaviors {
@@ -92,10 +99,10 @@
 
         NUM {
             bindings = <
-&kp LC(W)     &kp N7  &kp N8  &kp N9  &kp LS(SEMICOLON)                                          &kp CARET          &kp RC(PLUS)   &kp TILDE         &kp RS(RC(L))    &kp DELETE
-&kp LS(TAB)   &kp N4  &kp N5  &kp N6  &kp MINUS          &trans                 &kp F2           &kp F9             &lt 2 F2       &kp RC(NUMBER_1)  &kp DOLLAR       &kp COLON
-&kp SLASH     &kp N1  &kp N2  &kp N3  &kp PERIOD         &kp RIGHT_SHIFT        &kp F4           &kp F10            &kp RC(MINUS)  &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp UNDER
-&kp ASTERISK  &kp N0  &trans  &trans  &kp LS(R)          &kp LC(SEMICOLON)      &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                    &kp RA(ENTER)
+&kp LC(W)     &kp N7  &kp N8  &kp N9  &kp LS(SEMICOLON)                                          &kp CARET          &kp RC(LS(SEMICOLON))  &kp TILDE         &kp RS(RC(L))       &kp DELETE
+&kp LS(TAB)   &kp N4  &kp N5  &kp N6  &kp MINUS          &trans                 &kp F2           &kp F9             &lt 2 F2               &kp RC(NUMBER_1)  &kp DOLLAR          &kp COLON
+&kp SLASH     &kp N1  &kp N2  &kp N3  &kp PERIOD         &kp RIGHT_SHIFT        &kp F4           &kp F10            &kp RC(MINUS)          &kp LEFT_BRACE    &kp RA(DOWN_ARROW)  &kp UNDER
+&kp ASTERISK  &kp N0  &trans  &trans  &kp LS(R)          &kp LC(SEMICOLON)      &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                               &kp RA(ENTER)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -115,7 +122,7 @@
         MOUSE {
             bindings = <
 &kp LA(F4)   &kp LC(A)  &kp LC(Z)  &kp LC(Y)           &trans                                        &kp LC(W)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp LG(P)  &trans
-&kp LA(TAB)  &kp LC(X)  &kp LC(C)  &kp LC(V)           &trans     &trans                   &trans    &mkp MB1   &mkp LCLK        &mkp MCLK          &mkp RCLK  &trans
+&kp LA(TAB)  &kp LC(X)  &kp LC(C)  &kp LC(V)           &trans     &trans                   &trans    &kp LC(Q)  &mkp LCLK        &mkp MCLK          &mkp RCLK  &trans
 &kp LG(TAB)  &trans     &kp LC(Q)  &kp LC(U)           &trans     &mkp RCLK                &trans    &trans     &mkp MB4         &kp RS(LG(X))      &kp RC(P)  &trans
 &kp LA(N5)   &kp LC(P)  &kp LC(T)  &kp LG(LEFT_ARROW)  &kp LG(D)  &kp LG(RIGHT_ARROW)      &mkp MB4  &mkp MB5                                                  &trans
             >;
