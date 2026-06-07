@@ -132,10 +132,10 @@
 
         SYMBOL {
             bindings = <
-&kp ESC       &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NON_US_BACKSLASH                                  &kp F5               &kp F7                &kp F8                 &kp F11        &kp AT_SIGN
-&kp TAB       &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &kp CARET             &to 0       &kp AMPERSAND       &kp F9               &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON  &kp LEFT_BRACKET
-&kp LS(CAPS)  &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp POUND              &kp TILDE             &trans      &kp DOUBLE_QUOTES   &kp F10              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON      &kp RIGHT_BRACKET
-&kp LCTRL     &kp LESS_THAN    &kp GREATER_THAN      &trans                 &trans                &trans      &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                              &kp F12
+&kp ESC       &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NON_US_BACKSLASH                                        &kp F5               &kp F7                &kp F8                 &kp F11        &kp AT_SIGN
+&kp TAB       &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &kp CARET             &to 0             &kp AMPERSAND       &kp F9               &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON  &kp LEFT_BRACKET
+&kp LS(CAPS)  &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp POUND              &kp TILDE             &kp ASTERISK      &kp DOUBLE_QUOTES   &kp F10              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON      &kp RIGHT_BRACKET
+&kp LCTRL     &kp LESS_THAN    &kp GREATER_THAN      &trans                 &trans                &trans            &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                              &kp F12
             >;
 
             sensor-bindings = <&ROTATE SCRL_LEFT SCRL_RIGHT>;
