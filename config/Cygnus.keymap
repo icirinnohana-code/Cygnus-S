@@ -49,8 +49,50 @@
         new_macro3: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp TAB &kp DOWN_ARROW &kp DOWN_ARROW &kp RET>;
+            bindings = <&kp DOWN_ARROW &kp DOWN_ARROW &kp TAB>;
             label = "NEW_MACRO";
+        };
+
+        new_macro4: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp TAB>;
+            label = "NEW_MACRO";
+        };
+
+        new_macro5: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp RCLK &kp W &kp F &kp LC(V) &kp ENTER>;
+            label = "NEW_MACRO";
+        };
+
+        new_macro6: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB) &kp END>;
+            label = "NEW_MACRO";
+        };
+
+        new_macro7: new_macro7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(G) &kp DOWN_ARROW>;
+            label = "NEW_MACRO7";
+        };
+
+        new_macro8: new_macro8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp H &kp Q &kp S>;
+            label = "NEW_MACRO8";
+        };
+
+        new_macro9: new_macro9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp P &kp H>;
+            label = "NEW_MACRO9";
         };
     };
 
