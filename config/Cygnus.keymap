@@ -46,28 +46,28 @@
             label = "NEW_MACRO2";
         };
 
-        new_macro3: new_macro {
+        system_yes: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DOWN_ARROW &kp DOWN_ARROW &kp TAB>;
             label = "NEW_MACRO";
         };
 
-        new_macro4: new_macro {
+        system_none: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp END &kp TAB>;
             label = "NEW_MACRO";
         };
 
-        new_macro5: new_macro {
+        new_folder: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&mkp RCLK &kp W &kp F &kp LC(V) &kp ENTER>;
             label = "NEW_MACRO";
         };
 
-        new_macro6: new_macro {
+        print_tezashi: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(TAB) &kp END>;
@@ -81,14 +81,14 @@
             label = "NEW_MACRO7";
         };
 
-        new_macro8: new_macro8 {
+        mail_furiwake: new_macro8 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT &kp H &kp Q &kp S>;
             label = "NEW_MACRO8";
         };
 
-        new_macro9: new_macro9 {
+        excel_1page: new_macro9 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT &kp P &kp H>;
@@ -141,10 +141,10 @@
 
         NUM {
             bindings = <
-&kp LC(W)     &kp N7  &kp N8  &kp N9  &kp LS(SEMICOLON)                                          &kp CARET          &kp RC(LS(SEMICOLON))  &kp TILDE         &kp RS(RC(L))       &kp DELETE
-&kp LS(TAB)   &kp N4  &kp N5  &kp N6  &kp MINUS          &trans                 &kp F2           &kp F9             &lt 2 F2               &kp RC(NUMBER_1)  &kp DOLLAR          &kp COLON
-&kp SLASH     &kp N1  &kp N2  &kp N3  &kp PERIOD         &kp RIGHT_SHIFT        &kp F4           &kp F10            &kp RC(MINUS)          &kp LEFT_BRACE    &kp RA(DOWN_ARROW)  &kp UNDER
-&kp ASTERISK  &kp N0  &trans  &trans  &kp LS(R)          &kp LC(SEMICOLON)      &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                               &kp RA(ENTER)
+&kp LC(W)     &kp N7  &kp N8  &kp N9        &kp LS(SEMICOLON)                                          &kp CARET          &kp RC(LS(SEMICOLON))  &kp RC(D)         &kp RS(RC(L))       &kp DELETE
+&kp LS(TAB)   &kp N4  &kp N5  &kp N6        &kp MINUS          &trans                 &kp F2           &kp F9             &lt 2 F2               &kp RC(NUMBER_1)  &kp RC(R)           &kp COLON
+&kp SLASH     &kp N1  &kp N2  &kp N3        &kp PERIOD         &kp RIGHT_SHIFT        &kp F4           &kp F10            &kp RC(MINUS)          &kp LEFT_BRACE    &kp RA(DOWN_ARROW)  &kp UNDER
+&kp ASTERISK  &kp N0  &trans  &excel_1page  &kp LS(R)          &kp LC(SEMICOLON)      &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                               &kp RA(ENTER)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
