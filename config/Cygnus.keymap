@@ -121,10 +121,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                  &kp T                                                     &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &lt 2 F                &kp G        &mkp MCLK                  &kp TAB           &kp H        &kp J  &kp K      &lt 5 L  &lt 4 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                  &kp B        &kp LG(LC(V))              &to 6             &kp N        &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 INTERNATIONAL_5  &lt 2 SPACE  &lt 5 INTERNATIONAL_4      &lt 3 INT_HENKAN  &lt 2 ENTER                             &kp ENTER
+&kp Q             &kp W         &kp E         &kp R                  &kp T                                                            &kp Y                      &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &lt 2 F                &kp G        &mkp MCLK                  &kp LANG_ZENKAKUHANKAKU  &kp H                      &kp J  &kp K      &lt 5 L  &lt 4 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                  &kp B        &to 2                      &to 6                    &kp N                      &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 INTERNATIONAL_5  &lt 2 SPACE  &lt 5 INTERNATIONAL_4      &lt 3 INT_HENKAN         &lt 2 LANG_ZENKAKUHANKAKU                             &kp ENTER
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -137,25 +137,27 @@
 &kp LS(CAPS)  &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp POUND              &trans   &trans      &kp DOUBLE_QUOTES   &kp F10              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON      &kp RIGHT_BRACKET
 &kp LCTRL     &trans           &trans                &trans                 &trans   &trans      &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                              &kp F12
             >;
+
+            sensor-bindings = <&ROTATE SCRL_LEFT SCRL_RIGHT>;
         };
 
         NUM {
             bindings = <
 &kp LC(W)     &kp N7  &kp N8      &kp N9        &kp MINUS                                              &kp F4             &kp RC(LS(SEMICOLON))  &kp RC(D)         &kp RS(RC(L))       &kp DELETE
 &kp LS(TAB)   &kp N4  &kp N5      &kp N6        &kp PLUS       &trans                 &kp SLASH        &kp F9             &kp F2                 &kp RC(NUMBER_1)  &kp RC(R)           &kp COLON
-&kp SLASH     &kp N1  &kp N2      &kp N3        &kp LS(MINUS)  &kp RETURN             &kp ASTERISK     &kp F10            &kp RC(MINUS)          &to 1             &kp RA(DOWN_ARROW)  &kp UNDER
+&kp SLASH     &kp N1  &kp N2      &kp N3        &kp LS(MINUS)  &to 3                  &kp ASTERISK     &kp F10            &kp RC(MINUS)          &to 1             &kp RA(DOWN_ARROW)  &kp TILDE
 &kp ASTERISK  &kp N0  &kp PERIOD  &excel_1page  &kp LS(R)      &kp LC(SEMICOLON)      &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                               &kp RA(ENTER)
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&ROTATE SCRL_LEFT SCRL_RIGHT>;
         };
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp HOME        &kp UP_ARROW  &kp PAGE_UP      &new_folder                                          &trans       &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &kp BACKSPACE
-&kp TAB         &kp LEFT_ARROW  &new_macro1   &kp RIGHT_ARROW  &print_tezashi  &trans      &kp LS(LG(LEFT_ARROW))   &trans       &kp LEFT_ARROW  &new_macro1     &kp RIGHT_ARROW  &trans
-&kp LEFT_SHIFT  &kp END         &kp DOWN      &kp PAGE_DOWN    &print_2in1     &trans      &kp LG(LS(RIGHT_ARROW))  &trans       &kp END         &kp DOWN_ARROW  &kp PAGE_DOWN    &trans
-&kp LCTRL       &trans          &trans        &trans           &trans          &trans      &kp LS(LC(TAB))          &kp LC(TAB)                                                   &kp RS(ENTER)
+&kp ESCAPE      &kp HOME        &kp UP_ARROW  &kp PAGE_UP      &new_folder                                          &kp RC(HOME)  &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &kp BACKSPACE
+&kp TAB         &kp LEFT_ARROW  &new_macro1   &kp RIGHT_ARROW  &print_tezashi  &to 0       &kp LS(LG(LEFT_ARROW))   &new_macro2   &kp LEFT_ARROW  &new_macro1     &kp RIGHT_ARROW  &kp SEMICOLON
+&kp LEFT_SHIFT  &kp END         &kp DOWN      &kp PAGE_DOWN    &print_2in1     &to 2       &kp LG(LS(RIGHT_ARROW))  &kp RC(END)   &kp END         &kp DOWN_ARROW  &kp PAGE_DOWN    &kp UNDERSCORE
+&kp LCTRL       &kp LC(F)       &kp LC(H)     &trans           &trans          &trans      &kp LS(LC(TAB))          &kp LC(TAB)                                                    &kp RS(ENTER)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -163,10 +165,10 @@
 
         MOUSE {
             bindings = <
-&kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                       &kp LC(J)  &kp LA(TAB)     &kp LG(TAB)    &kp LG(P)  &trans
-&kp LA(TAB)  &kp LC(X)      &kp LC(C)  &kp LC(V)           &system_yes    &mkp MCLK                &kp RC(W)   &kp LC(Q)  &mkp LCLK       &mkp MCLK      &mkp RCLK  &trans
-&kp LG(TAB)  &kp LC(LS(V))  &kp LC(Q)  &kp LC(U)           &system_none   &mkp RCLK                &kp RA(F4)  &kp RC(M)  &mail_furiwake  &kp RS(RC(X))  &kp RC(P)  &kp RCTRL
-&kp LA(N5)   &kp LC(P)      &kp LC(T)  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &mkp MB4    &mkp MB5                                             &none
+&to_layer_0 Q      &to_layer_0 W         &to_layer_0 E         &to_layer_0 R       &to_layer_0 T                                      &kp LC(J)  &kp LA(TAB)     &kp LG(TAB)    &kp LG(P)  &kp PRINTSCREEN
+&to_layer_0 A      &to_layer_0 S         &to_layer_0 D         &to_layer_0 F       &to_layer_0 G  &to 0                    &kp RC(W)  &kp LC(Q)  &mkp LCLK       &mkp MCLK      &mkp RCLK  &trans
+&to_layer_0 Z      &to_layer_0 X         &to_layer_0 C         &to_layer_0 V       &to_layer_0 B  &mkp RCLK                &kp RC(G)  &kp RC(M)  &mail_furiwake  &kp RS(RC(X))  &kp RC(P)  &kp RCTRL
+&to_layer_0 LCTRL  &to_layer_0 LEFT_WIN  &to_layer_0 LEFT_ALT  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &mkp MB4   &mkp MB5                                             &none
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LG(LEFT_ARROW)) LS(LG(RIGHT_ARROW))>;
@@ -174,10 +176,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans       &trans  &kp BACKSPACE
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &new_macro2  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans       &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                               &kp F12
+&kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                   &trans  &trans  &trans  &trans  &kp BACKSPACE
+&kp LA(TAB)  &kp LC(X)      &kp LC(C)  &kp LC(V)           &system_yes    &mkp MCLK                &trans  &trans  &trans  &trans  &trans  &kp LC(LG(V))
+&kp LG(TAB)  &kp LC(LS(V))  &kp LC(Q)  &kp LC(U)           &system_none   &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&kp LA(N5)   &kp LC(S)      &kp LC(T)  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &trans  &trans                          &kp F12
             >;
         };
 
