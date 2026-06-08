@@ -176,10 +176,10 @@
 
         SCROLL {
             bindings = <
-&kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                   &trans  &trans  &trans  &trans  &kp BACKSPACE
-&kp LA(TAB)  &kp LC(X)      &kp LC(C)  &kp LC(V)           &system_yes    &mkp MCLK                &trans  &trans  &trans  &trans  &trans  &kp LC(LG(V))
-&kp LG(TAB)  &kp LC(LS(V))  &kp LC(Q)  &kp LC(U)           &system_none   &trans                   &trans  &trans  &trans  &trans  &trans  &trans
-&kp LA(N5)   &kp LC(S)      &kp LC(T)  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &trans  &trans                          &kp F12
+&kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                            &trans       &trans  &trans  &trans  &kp BACKSPACE
+&kp LA(TAB)  &kp LC(X)      &kp LC(C)  &kp LC(V)           &system_yes    &mkp MCLK                &trans           &trans       &trans  &trans  &trans  &kp LC(LG(V))
+&kp LG(TAB)  &kp LC(LS(V))  &kp LC(Q)  &kp LC(U)           &system_none   &trans                   &trans           &trans       &trans  &trans  &trans  &trans
+&kp LA(N5)   &kp LC(S)      &kp LC(T)  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &kp LS(LC(TAB))  &kp LC(TAB)                          &kp F12
             >;
         };
 
