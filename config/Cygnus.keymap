@@ -138,7 +138,7 @@
 &kp LCTRL     &kp LESS_THAN    &kp GREATER_THAN      &trans                 &trans                &trans      &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                              &kp F12
             >;
 
-            sensor-bindings = <&ROTATE SCRL_LEFT SCRL_RIGHT>;
+            sensor-bindings = <&ROTATE SCRL_UP SCRL_DOWN>;
         };
 
         NUM {
@@ -149,7 +149,7 @@
 &kp ASTERISK  &kp N0  &kp PERIOD  &excel_1page  &kp LS(R)      &kp LC(SEMICOLON)      &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                               &kp RA(ENTER)
             >;
 
-            sensor-bindings = <&ROTATE SCRL_LEFT SCRL_RIGHT>;
+            sensor-bindings = <&ROTATE SCRL_UP SCRL_DOWN>;
         };
 
         ARROW {
@@ -165,10 +165,10 @@
 
         MOUSE {
             bindings = <
-&to_layer_0 Q      &to_layer_0 W         &to_layer_0 E         &to_layer_0 R       &to_layer_0 T                                     &to_layer_0 Y  &kp LS(LC(TAB))  &msc SCRL_UP    &kp LC(TAB)  &kp PRINTSCREEN
-&to_layer_0 A      &to_layer_0 S         &to_layer_0 D         &to_layer_0 F       &to_layer_0 G  &to 0                    &none     &to_layer_0 H  &mkp LCLK        &mkp MCLK       &mkp RCLK    &kp RCTRL
-&to_layer_0 Z      &to_layer_0 X         &to_layer_0 C         &to_layer_0 V       &to_layer_0 B  &mkp RCLK                &none     &to_layer_0 N  &mkp MB4         &msc SCRL_DOWN  &mkp MB5     &kp RCTRL
-&to_layer_0 LCTRL  &to_layer_0 LEFT_WIN  &to_layer_0 LEFT_ALT  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &mkp MB4  &mkp MB5                                                     &none
+&to_layer_0 Q   &to_layer_0 W         &to_layer_0 E         &to_layer_0 R       &to_layer_0 T                                     &to_layer_0 Y  &kp LS(LC(TAB))  &msc SCRL_UP    &kp LC(TAB)  &kp PRINTSCREEN
+&to_layer_0 A   &to_layer_0 S         &to_layer_0 D         &to_layer_0 F       &to_layer_0 G  &to 0                    &none     &to_layer_0 H  &mkp LCLK        &mkp MCLK       &mkp RCLK    &to_layer_0 MINUS
+&kp LEFT_SHIFT  &to_layer_0 X         &to_layer_0 C         &to_layer_0 V       &to_layer_0 B  &kp LG(R)                &none     &to_layer_0 N  &mkp MB4         &msc SCRL_DOWN  &mkp MB5     &to_layer_0 SLASH
+&kp LCTRL       &to_layer_0 LEFT_WIN  &to_layer_0 LEFT_ALT  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &mkp MB4  &mkp MB5                                                     &to_layer_0 ENTER
             >;
 
             sensor-bindings = <&ROTATE SCRL_UP SCRL_DOWN>;
@@ -181,6 +181,8 @@
 &kp LG(TAB)  &kp LC(LS(V))  &kp LC(Q)  &kp LC(U)           &system_none   &trans                   &kp RC(G)        &kp RC(M)    &mail_furiwake  &kp RC(RS(X))  &kp RC(P)           &trans
 &kp LA(N5)   &kp LC(S)      &kp LC(T)  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &kp LS(LC(TAB))  &kp LC(TAB)                                                     &kp F12
             >;
+
+            sensor-bindings = <&ROTATE SCRL_UP SCRL_DOWN>;
         };
 
         Bluetooth {
