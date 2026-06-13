@@ -174,29 +174,23 @@
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
         };
 
-MOUSE {
-    bindings = <
-        &to_layer_0  &to_layer_0  &to_layer_0  &to_layer_0  &to_layer_0
-        &to_layer_0  &kp LS(LC(TAB))  &kp LC(T)  &kp LC(TAB)  &to_layer_0
-
-        &to_layer_0  &to_layer_0  &to_layer_0  &to_layer_0  &to_layer_0
-        &to 0        &kp LC(C)    &to_layer_0  &mkp LCLK     &mkp MCLK  &mkp RCLK  &to_layer_0
-
-        &kp LEFT_SHIFT  &to_layer_0  &to_layer_0  &to_layer_0  &to_layer_0
-        &kp LG(LC(V))   &kp LC(V)    &to_layer_0  &mkp MB4     &kp LC(W)  &mkp MB5  &kp RCTRL
-
-        &kp LCTRL  &to_layer_0  &to_layer_0  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mkp MB5  &to_layer_0
-    >;
-
-    sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
-};
-
-       SCROLL {
+        MOUSE {
             bindings = <
-&kp LA(F4)    &kp LC(A)      &kp LC(Z)      &kp LC(Y)        &kp LA(LC(F))   &kp RC(J)      &kp LA(TAB)     &kp LG(TAB)     &kp LG(P)        &str "@"
-&kp LA(TAB)   &kp LC(X)      &kp LC(C)      &kp LC(V)        &system_yes     &mkp MCLK      &kp RC(W)       &kp RC(Q)       &Login2          &Login_1
-&kp LG(TAB)   &kp LC(LS(V))  &kp LC(Q)      &kp LC(U)        &system_none    &none          &kp RC(G)       &kp RC(M)       &mail_furiwake   &kp RC(RS(X))
-&kp LA(N5)    &kp LC(S)      &kp LC(T)      &kp LG(LEFT_ARROW) &kp LG(D)     &kp LG(RIGHT_ARROW) &kp LS(LC(TAB)) &kp LC(TAB)   &kp F12          &trans
+&to_layer_0     &to_layer_0  &to_layer_0  &to_layer_0  &to_layer_0                                &to_layer_0  &kp LS(LC(TAB))  &kp LC(T)  &kp LC(TAB)  &to_layer_0
+&to_layer_0     &to_layer_0  &to_layer_0  &to_layer_0  &to_layer_0  &to 0              &kp LC(C)  &to_layer_0  &mkp LCLK        &mkp MCLK  &mkp RCLK    &to_layer_0
+&kp LEFT_SHIFT  &to_layer_0  &to_layer_0  &to_layer_0  &to_layer_0  &kp LG(LC(V))      &kp LC(V)  &to_layer_0  &mkp MB4         &kp LC(W)  &mkp MB5     &kp RCTRL
+&kp LCTRL       &to_layer_0  &to_layer_0  &mkp LCLK    &mkp MCLK    &mkp RCLK          &mkp MB4   &mkp MB5                                              &to_layer_0
+            >;
+
+            sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
+        };
+
+        SCROLL {
+            bindings = <
+&kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                            &kp RC(J)    &kp LA(TAB)     &kp LG(TAB)    &kp LG(P)           &kp AT
+&kp LA(TAB)  &kp LC(X)      &kp LC(C)  &kp LC(V)           &system_yes    &mkp MCLK                &kp RC(W)        &kp RC(Q)    &Login2         &Login_1       &kp LA(LC(DELETE))  &kp RCTRL
+&kp LG(TAB)  &kp LC(LS(V))  &kp LC(Q)  &kp LC(U)           &system_none   &none                    &kp RC(G)        &kp RC(M)    &mail_furiwake  &kp RC(RS(X))  &kp RC(P)           &trans
+&kp LA(N5)   &kp LC(S)      &kp LC(T)  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &kp LS(LC(TAB))  &kp LC(TAB)                                                     &kp F12
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
