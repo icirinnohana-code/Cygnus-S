@@ -143,7 +143,7 @@
 
         SYMBOL {
             bindings = <
-&kp ESC       &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NON_US_BACKSLASH                                         &kp F5               &kp F7           &kp F8                &kp F11                &str "@"
+&kp ESC       &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NON_US_BACKSLASH                                         &kp F5               &kp F7           &kp F8                &kp F11                &kp BACKSPACE
 &kp TAB       &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &kp CARET             &to 0              &kp EXCLAMATION     &kp F9               &kp AMPERSAND    &kp DOUBLE_QUOTES     &kp SEMICOLON          &kp LEFT_BRACKET
 &kp LS(CAPS)  &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp POUND              &kp TILDE             &none              &kp QUESTION        &kp F10              &kp PRINTSCREEN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET
 &kp LCTRL     &kp LESS_THAN    &kp GREATER_THAN      &excel_1page           &kp LS(H)             &kp LC(COLON)      &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                                &kp F12
@@ -187,7 +187,7 @@
 
         SCROLL {
             bindings = <
-&kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                            &kp RC(J)    &kp LA(TAB)     &kp LG(TAB)    &kp LG(P)           &kp BACKSPACE
+&kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                            &kp RC(J)    &kp LA(TAB)     &kp LG(TAB)    &kp LG(P)           &str "@"
 &kp LA(TAB)  &kp LC(X)      &kp LC(C)  &kp LC(V)           &system_yes    &mkp MCLK                &kp RC(W)        &kp RC(Q)    &Login2         &Login_1       &kp LA(LC(DELETE))  &kp RCTRL
 &kp LG(TAB)  &kp LC(LS(V))  &kp LC(Q)  &kp LC(U)           &system_none   &none                    &kp RC(G)        &kp RC(M)    &mail_furiwake  &kp RC(RS(X))  &kp RC(P)           &trans
 &kp LA(N5)   &kp LC(S)      &kp LC(T)  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &kp LS(LC(TAB))  &kp LC(TAB)                                                     &kp F12
