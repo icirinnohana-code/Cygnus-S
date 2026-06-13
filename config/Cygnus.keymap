@@ -186,15 +186,15 @@
         };
 
        SCROLL {
-    bindings = <
-        &kp LA(F4)    &kp LC(A)      &kp LC(Z)      &kp LC(Y)        &kp LA(LC(F))   &kp RC(J)      &kp LA(TAB)     &kp LG(TAB)     &kp LG(P)        &str "@"
-        &kp LA(TAB)   &kp LC(X)      &kp LC(C)      &kp LC(V)        &system_yes     &mkp MCLK      &kp RC(W)       &kp RC(Q)       &Login2          &Login_1
-        &kp LG(TAB)   &kp LC(LS(V))  &kp LC(Q)      &kp LC(U)        &system_none    &none          &kp RC(G)       &kp RC(M)       &mail_furiwake   &kp RC(RS(X))
-        &kp LA(N5)    &kp LC(S)      &kp LC(T)      &kp LG(LEFT_ARROW) &kp LG(D)     &kp LG(RIGHT_ARROW) &kp LS(LC(TAB)) &kp LC(TAB)   &kp F12          &trans
-    >;
+            bindings = <
+&kp LA(F4)    &kp LC(A)      &kp LC(Z)      &kp LC(Y)        &kp LA(LC(F))   &kp RC(J)      &kp LA(TAB)     &kp LG(TAB)     &kp LG(P)        &str "@"
+&kp LA(TAB)   &kp LC(X)      &kp LC(C)      &kp LC(V)        &system_yes     &mkp MCLK      &kp RC(W)       &kp RC(Q)       &Login2          &Login_1
+&kp LG(TAB)   &kp LC(LS(V))  &kp LC(Q)      &kp LC(U)        &system_none    &none          &kp RC(G)       &kp RC(M)       &mail_furiwake   &kp RC(RS(X))
+&kp LA(N5)    &kp LC(S)      &kp LC(T)      &kp LG(LEFT_ARROW) &kp LG(D)     &kp LG(RIGHT_ARROW) &kp LS(LC(TAB)) &kp LC(TAB)   &kp F12          &trans
+            >;
 
-    sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
-};
+            sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
+        };
 
         Bluetooth {
             bindings = <
