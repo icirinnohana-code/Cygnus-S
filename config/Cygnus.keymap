@@ -3,6 +3,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
@@ -14,6 +15,8 @@
     quick-tap-ms = <0>;
     tapping-term-ms = <160>;
 };
+
+&lt { tapping-term-ms = <160>; };
 
 / {
     combos {
@@ -119,11 +122,11 @@
         layer_mouse: layer_mouse {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_MOUSE";
-            bindings = <&to>, <&mkp>;
+            bindings = <&mo>, <&mkp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <160>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
         };
     };
 
@@ -132,10 +135,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                  &kp T                                                            &kp Y               &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &lt 2 F                &kp G        &mkp MCLK                  &kp LANG_ZENKAKUHANKAKU  &kp H               &kp J  &lt 3 K    &lt 5 L  &lt 4 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                  &kp B        &to 3                      &to 6                    &kp N               &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 INTERNATIONAL_5  &lt 2 SPACE  &lt 5 INTERNATIONAL_4      &lt 1 INT_HENKAN         &layer_mouse 2 MB1                             &mkp LCLK
+&kp Q             &kp W         &kp E         &kp R       &kp T                                          &kp Y               &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &lt 2 F     &kp G        &mkp MCLK       &kp GRAVE         &kp H               &kp J  &lt 3 K    &lt 5 L  &lt 4 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V       &kp B        &to 3           &to 6             &kp N               &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 INT1  &lt 2 SPACE  &lt 5 INT2      &lt 1 INT_HENKAN  &layer_mouse 2 MB1                             &kp RET
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -143,10 +146,10 @@
 
         SYMBOL {
             bindings = <
-&kp ESC       &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NON_US_BACKSLASH                                         &kp F5               &kp F7           &kp F8                &kp F11                &kp BACKSPACE
-&kp TAB       &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &kp CARET             &to 0              &kp EXCLAMATION     &kp F9               &kp AMPERSAND    &kp DOUBLE_QUOTES     &kp SEMICOLON          &kp LEFT_BRACKET
-&kp LS(CAPS)  &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp POUND              &kp TILDE             &none              &kp QUESTION        &kp F10              &kp PRINTSCREEN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET
-&kp LCTRL     &kp LESS_THAN    &kp GREATER_THAN      &excel_1page           &kp LS(H)             &kp LC(COLON)      &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                                &kp F12
+&kp ESC       &kp COLON        &kp LS(N9)        &kp LS(N0)    &kp NON_US_BACKSLASH                                         &kp F5               &kp F7           &kp F8         &kp F11        &kp BACKSPACE
+&kp TAB       &kp DOLLAR       &kp PERCENT       &kp LS(N7)    &kp CARET             &to 0              &kp EXCLAMATION     &kp F9               &kp LS(N7)       &kp RS(COLON)  &kp SEMICOLON  &kp RS(AT_SIGN)
+&kp LS(CAPS)  &kp EXCLAMATION  &kp RS(COLON)     &kp POUND     &kp TILDE             &none              &kp QUESTION        &kp F10              &kp PRINTSCREEN  &kp LS(N9)     &kp LS(N0)     &kp LS(LEFT_BRACKET)
+&kp LCTRL     &kp LESS_THAN    &kp GREATER_THAN  &excel_1page  &kp LS(H)             &kp LC(COLON)      &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                 &kp F12
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -154,10 +157,10 @@
 
         NUM {
             bindings = <
-&kp LC(W)     &kp N7  &kp N8      &kp N9        &kp MINUS                                              &kp F4             &kp RC(LS(SEMICOLON))  &kp RS(F11)       &kp RS(RC(L))       &kp DELETE
-&kp LS(TAB)   &kp N4  &kp N5      &kp N6        &kp PLUS       &to 0                  &kp RC(SPACE)    &kp F9             &kp F2                 &kp RC(NUMBER_1)  &kp RC(R)           &kp COLON
-&kp SLASH     &kp N1  &kp N2      &kp N3        &kp LS(MINUS)  &mo 1                  &kp RS(SPACE)    &kp F10            &kp RC(MINUS)          &kp LC(D)         &kp RA(DOWN_ARROW)  &kp TILDE
-&kp ASTERISK  &kp N0  &kp PERIOD  &excel_1page  &kp LS(R)      &kp LC(SEMICOLON)      &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                               &kp RA(ENTER)
+&kp LC(W)         &kp N7  &kp N8      &kp N9        &kp MINUS                                              &kp F4             &kp RC(LS(SEMICOLON))  &kp RS(F11)       &kp RS(RC(L))       &kp DELETE
+&kp LS(TAB)       &kp N4  &kp N5      &kp N6        &kp RS(CARET)  &to 0                  &kp RC(SPACE)    &kp F9             &kp F2                 &kp RC(NUMBER_1)  &kp RC(R)           &kp LS(SEMICOLON)
+&kp SLASH         &kp N1  &kp N2      &kp N3        &kp EQUAL      &mo 1                  &kp LS(SPACE)    &kp F10            &kp RC(MINUS)          &kp LC(D)         &kp RA(DOWN_ARROW)  &kp PLUS
+&kp LS(ASTERISK)  &kp N0  &kp PERIOD  &excel_1page  &kp LS(R)      &kp LC(SEMICOLON)      &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                               &kp RA(ENTER)
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -167,7 +170,7 @@
             bindings = <
 &kp ESCAPE      &kp HOME        &kp UP_ARROW  &kp PAGE_UP      &new_folder                                                 &kp RC(HOME)  &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &kp BACKSPACE
 &kp TAB         &kp LEFT_ARROW  &Login_1      &kp RIGHT_ARROW  &print_tezashi  &to 0              &kp LS(LG(LEFT_ARROW))   &Login2       &kp LEFT_ARROW  &none           &kp RIGHT_ARROW  &kp SEMICOLON
-&kp LEFT_SHIFT  &kp END         &kp DOWN      &kp PAGE_DOWN    &print_2in1     &to 2              &kp LG(LS(RIGHT_ARROW))  &kp RC(END)   &kp END         &kp DOWN_ARROW  &kp PAGE_DOWN    &kp UNDERSCORE
+&kp LEFT_SHIFT  &kp END         &kp DOWN      &kp PAGE_DOWN    &print_2in1     &to 2              &kp LG(LS(RIGHT_ARROW))  &kp RC(END)   &kp END         &kp DOWN_ARROW  &kp PAGE_DOWN    &kp LS(MINUS)
 &kp LCTRL       &kp LC(F)       &kp LC(H)     &kp LANGUAGE_5   &kp SPACE       &kp LS(SPACE)      &kp LS(LC(TAB))          &kp LC(TAB)                                                    &kp RS(ENTER)
             >;
 
@@ -187,7 +190,7 @@
 
         SCROLL {
             bindings = <
-&kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                            &kp RC(J)    &kp LA(TAB)     &kp LG(TAB)    &kp LG(P)           &kp NON_US_HASH
+&kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                            &kp RC(J)    &kp LA(TAB)     &kp LG(TAB)    &kp LG(P)           &kp LS(NUMBER_2)
 &kp LA(TAB)  &kp LC(X)      &kp LC(C)  &kp LC(V)           &system_yes    &mkp MCLK                &kp RC(W)        &kp RC(Q)    &Login2         &Login_1       &kp LA(LC(DELETE))  &kp RCTRL
 &kp LG(TAB)  &kp LC(LS(V))  &kp LC(Q)  &kp LC(U)           &system_none   &none                    &kp RC(G)        &kp RC(M)    &mail_furiwake  &kp RC(RS(X))  &kp RC(P)           &trans
 &kp LA(N5)   &kp LC(S)      &kp LC(T)  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &kp LS(LC(TAB))  &kp LC(TAB)                                                     &kp F12
@@ -198,10 +201,10 @@
 
         Bluetooth {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans     &to 0       &studio_unlock  &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kt KP_N4  &trans      &bootloader     &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans     &trans      &trans          &trans                                                  &bt BT_CLR_ALL
+&trans  &trans        &trans        &trans        &trans                               &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans        &trans        &trans        &trans     &to 0       &out OUT_TOG  &trans        &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kt KP_N4  &trans      &bootloader   &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans        &trans        &trans        &trans     &trans      &trans        &trans                                                  &bt BT_CLR_ALL
             >;
         };
 
