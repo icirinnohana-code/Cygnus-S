@@ -12,6 +12,7 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
+    tapping-term-ms = <160>;
 };
 
 / {
@@ -114,6 +115,16 @@
 
             tap-ms = <20>;
         };
+
+        layer_mouse: layer_mouse {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_MOUSE";
+            bindings = <&to>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <160>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -121,10 +132,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                  &kp T                                                            &kp Y  &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &lt 2 F                &kp G        &mkp MCLK                  &kp LANG_ZENKAKUHANKAKU  &kp H  &kp J  &lt 3 K    &lt 5 L  &lt 4 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                  &kp B        &to 3                      &to 6                    &kp N  &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 INTERNATIONAL_5  &lt 2 SPACE  &lt 5 INTERNATIONAL_4      &lt 1 INT_HENKAN         &lt 2  LANG_ZENKAKUHANKAKU
+&kp Q             &kp W         &kp E         &kp R                  &kp T                                                            &kp Y               &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &lt 2 F                &kp G        &mkp MCLK                  &kp LANG_ZENKAKUHANKAKU  &kp H               &kp J  &lt 3 K    &lt 5 L  &lt 4 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                  &kp B        &to 3                      &to 6                    &kp N               &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 INTERNATIONAL_5  &lt 2 SPACE  &lt 5 INTERNATIONAL_4      &lt 1 INT_HENKAN         &layer_mouse 2 MB1                             &mkp LCLK
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -165,10 +176,10 @@
 
         MOUSE {
             bindings = <
-&to_layer_0 Q   &to_layer_0 W         &to_layer_0 E         &to_layer_0 R       &to_layer_0 T                                      &to_layer_0 Y  &kp LS(LC(TAB))  &kp LC(T)  &kp LC(TAB)  &to_layer_0 P
-&to_layer_0 A   &to_layer_0 S         &to_layer_0 D         &to_layer_0 F       &to_layer_0 G  &to 0                    &kp LC(C)  &to_layer_0 H  &mkp LCLK        &mkp MCLK  &mkp RCLK    &to_layer_0 MINUS
-&kp LEFT_SHIFT  &to_layer_0 X         &to_layer_0 C         &to_layer_0 V       &to_layer_0 B  &kp LG(LC(V))            &kp LC(V)  &to_layer_0 N  &mkp MB4         &kp LC(W)  &mkp MB5     &kp RCTRL
-&kp LCTRL       &to_layer_0 LEFT_WIN  &to_layer_0 LEFT_ALT  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &mkp MB4   &mkp MB5                                                &to_layer_0 ENTER
+&to_layer_0 Q   &to_layer_0 W         &to_layer_0 E         &to_layer_0 R  &to_layer_0 T                                &to_layer_0 Y  &kp LS(LC(TAB))  &kp LC(T)  &kp LC(TAB)  &to_layer_0 P
+&to_layer_0 A   &to_layer_0 S         &to_layer_0 D         &to_layer_0 F  &to_layer_0 G  &to 0              &kp LC(C)  &to_layer_0 H  &mkp LCLK        &mkp MCLK  &mkp RCLK    &to_layer_0 MINUS
+&kp LEFT_SHIFT  &to_layer_0 X         &to_layer_0 C         &to_layer_0 V  &to_layer_0 B  &kp LG(LC(V))      &kp LC(V)  &to_layer_0 N  &mkp MB4         &kp LC(W)  &mkp MB5     &kp RCTRL
+&kp LCTRL       &to_layer_0 LEFT_WIN  &to_layer_0 LEFT_ALT  &mkp LCLK      &mkp MCLK      &mkp RCLK          &mkp MB4   &mkp MB5                                                &to_layer_0 ENTER
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
