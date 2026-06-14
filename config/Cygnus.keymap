@@ -102,14 +102,14 @@
         mul_mark: mul_mark {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&str "*">;
+            bindings = <&kp ASTERISK>;
             label = "MUL_MARK";
         };
 
         div_mark: div_mark {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&str "/">;
+            bindings = <&kp SLASH>;
             label = "DIV_MARK";
         };
     };
