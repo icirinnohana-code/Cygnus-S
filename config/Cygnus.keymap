@@ -176,9 +176,9 @@
 
         SYMBOL {
             bindings = <
-&kp ESC         &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &kp NON_US_BACKSLASH                                         &kp F5               &kp F7           &kp F8         &kp F11        &kp BACKSPACE
-&kp TAB         &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &kp CARET             &to 0              &kp EXCLAMATION     &kp F9               &kp LS(N7)       &kp RS(COLON)  &kp SEMICOLON  &kp JP_LBRACKET
-&kp LEFT_SHIFT  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp TILDE             &kp CAPS           &kp QUESTION        &kp F10              &kp PRINTSCREEN  &kp LS(N8)     &kp LS(N9)     &kp JP_RBRACKET
+&kp ESC         &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &kp JP_YEN                                         &kp F5               &kp F7           &kp F8         &kp F11        &kp BACKSPACE
+&kp TAB         &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &kp JP_CARET             &to 0              &kp EXCLAMATION     &kp F9               &kp LS(N7)       &kp RS(COLON)  &kp SEMICOLON  &kp JP_LBRACKET
+&kp LEFT_SHIFT  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp JP_PIPE             &kp CAPS           &kp QUESTION        &kp F10              &kp PRINTSCREEN  &kp LS(N8)     &kp LS(N9)     &kp JP_RBRACKET
 &kp LCTRL       &kp LESS_THAN     &kp GREATER_THAN  &excel_1page      &kp LS(H)             &kp LC(COLON)      &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                 &kp F12
             >;
 
@@ -190,7 +190,7 @@
 &kp LC(W)    &kp N7  &kp N8      &kp N9        &kp MINUS                                                        &kp F4             &kp RC(LS(SEMICOLON))  &kp RS(F11)       &kp RS(RC(L))       &kp DELETE
 &kp LS(TAB)  &kp N4  &kp N5      &kp N6        &kp RS(SEMICOLON)  &to 0                        &kp RC(SPACE)    &kp F9             &kp F2                 &kp RC(NUMBER_1)  &kp RC(R)           &kp JP_COLON
 &kp SLASH    &kp N1  &kp N2      &kp N3        &kp LS(MINUS)      &kp LANG_ZENKAKUHANKAKU      &kp LS(SPACE)    &kp F10            &kp RC(MINUS)          &kp LC(D)         &kp RA(DOWN_ARROW)  &kp JP_TILDE
-&kp LS(SQT)  &kp N0  &kp PERIOD  &excel_1page  &kp LS(R)          &kp LC(SEMICOLON)            &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                               &kp RA(ENTER)
+&kp JP_ASTERISK  &kp N0  &kp PERIOD  &excel_1page  &kp LS(R)          &kp LC(SEMICOLON)            &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                               &kp RA(ENTER)
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
