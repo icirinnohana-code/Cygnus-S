@@ -98,6 +98,20 @@
             bindings = <&kp LEFT_ALT &kp H &kp Q &kp S>;
             label = "MAIL_FURIWAKE";
         };
+
+        mul_mark: mul_mark {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ASTERISK>;
+            label = "MUL_MARK";
+        };
+
+        div_mark: div_mark {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>;
+            label = "DIV_MARK";
+        };
     };
 
     behaviors {
@@ -146,10 +160,10 @@
 
         SYMBOL {
             bindings = <
-&kp ESC       &kp COLON        &kp LS(N9)        &kp LS(N0)    &kp NON_US_BACKSLASH                                         &kp F5               &kp F7           &kp F8         &kp F11        &kp BACKSPACE
-&kp TAB       &kp DOLLAR       &kp PERCENT       &kp LS(N7)    &kp CARET             &to 0              &kp EXCLAMATION     &kp F9               &kp LS(N7)       &kp RS(COLON)  &kp SEMICOLON  &kp RS(AT_SIGN)
-&kp LS(CAPS)  &kp EXCLAMATION  &kp RS(COLON)     &kp POUND     &kp TILDE             &none              &kp QUESTION        &kp F10              &kp PRINTSCREEN  &kp LS(N9)     &kp LS(N0)     &kp LS(LEFT_BRACKET)
-&kp LCTRL     &kp LESS_THAN    &kp GREATER_THAN  &excel_1page  &kp LS(H)             &kp LC(COLON)      &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                 &kp F12
+&kp ESC         &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &kp NON_US_BACKSLASH                                         &kp F5               &kp F7           &kp F8         &kp F11        &kp BACKSPACE
+&kp TAB         &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &kp CARET             &to 0              &kp EXCLAMATION     &kp F9               &kp LS(N7)       &kp RS(COLON)  &kp SEMICOLON  &kp LBKT
+&kp LEFT_SHIFT  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp TILDE             &kp CAPS           &kp QUESTION        &kp F10              &kp PRINTSCREEN  &kp LS(N8)     &kp LS(N9)     &kp RBKT
+&kp LCTRL       &kp LESS_THAN     &kp GREATER_THAN  &excel_1page      &kp LS(H)             &kp LC(COLON)      &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                 &kp F12
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -157,10 +171,10 @@
 
         NUM {
             bindings = <
-&kp LC(W)         &kp N7  &kp N8      &kp N9        &kp MINUS                                              &kp F4             &kp RC(LS(SEMICOLON))  &kp RS(F11)       &kp RS(RC(L))       &kp DELETE
-&kp LS(TAB)       &kp N4  &kp N5      &kp N6        &kp RS(CARET)  &to 0                  &kp RC(SPACE)    &kp F9             &kp F2                 &kp RC(NUMBER_1)  &kp RC(R)           &kp LS(SEMICOLON)
-&kp SLASH         &kp N1  &kp N2      &kp N3        &kp EQUAL      &mo 1                  &kp LS(SPACE)    &kp F10            &kp RC(MINUS)          &kp LC(D)         &kp RA(DOWN_ARROW)  &kp PLUS
-&kp LS(ASTERISK)  &kp N0  &kp PERIOD  &excel_1page  &kp LS(R)      &kp LC(SEMICOLON)      &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                               &kp RA(ENTER)
+&kp LC(W)      &kp N7  &kp N8      &kp N9        &kp MINUS                                                        &kp F4             &kp RC(LS(SEMICOLON))  &kp RS(F11)       &kp RS(RC(L))       &kp DELETE
+&kp LS(TAB)    &kp N4  &kp N5      &kp N6        &kp RS(SEMICOLON)  &to 0                        &kp RC(SPACE)    &kp F9             &kp F2                 &kp RC(NUMBER_1)  &kp RC(R)           &kp GRAVE
+&kp FSLH       &kp N1  &kp N2      &kp N3        &kp LS(MINUS)      &kp LANG_ZENKAKUHANKAKU      &kp LS(SPACE)    &kp F10            &kp RC(MINUS)          &kp LC(D)         &kp RA(DOWN_ARROW)  &kp PLUS
+&kp RS(GRAVE)  &kp N0  &kp PERIOD  &excel_1page  &kp LS(R)          &kp LC(SEMICOLON)            &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)                                                               &kp RA(ENTER)
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -190,7 +204,7 @@
 
         SCROLL {
             bindings = <
-&kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                            &kp RC(J)    &kp LA(TAB)     &kp LG(TAB)    &kp LG(P)           &kp LS(NUMBER_2)
+&kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                            &kp RC(J)    &kp LA(TAB)     &kp LG(TAB)    &kp LG(P)           &kp LEFT_BRACKET
 &kp LA(TAB)  &kp LC(X)      &kp LC(C)  &kp LC(V)           &system_yes    &mkp MCLK                &kp RC(W)        &kp RC(Q)    &Login2         &Login_1       &kp LA(LC(DELETE))  &kp RCTRL
 &kp LG(TAB)  &kp LC(LS(V))  &kp LC(Q)  &kp LC(U)           &system_none   &none                    &kp RC(G)        &kp RC(M)    &mail_furiwake  &kp RC(RS(X))  &kp RC(P)           &trans
 &kp LA(N5)   &kp LC(S)      &kp LC(T)  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &kp LS(LC(TAB))  &kp LC(TAB)                                                     &kp F12
