@@ -176,10 +176,10 @@
 
         SYMBOL {
             bindings = <
-&kp ESC         &kp LS(N7)        &kp LS(N8)        &kp LS(N9)               &kp JP_YEN                                           &kp F5               &kp F7           &kp F8         &kp F11        &kp BACKSPACE
-&kp TAB         &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)         &kp JP_CARET  &to 0              &kp EXCLAMATION     &kp F9               &kp LS(N7)       &kp RS(COLON)  &kp SEMICOLON  &kp JP_LBRACKET
-&kp LEFT_SHIFT  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)         &kp JP_PIPE   &kp CAPS           &kp QUESTION        &kp F10              &kp PRINTSCREEN  &kp LS(N8)     &kp LS(N9)     &kp JP_RBRACKET
-&kp LCTRL       &kp LESS_THAN     &kp GREATER_THAN  &kp LANG_ZENKAKUHANKAKU  &kp SPACE     &kp LS(SPACE)      &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                 &kp F12
+&kp ESC         &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &kp JP_YEN                                           &kp F5               &kp F7           &kp F8         &kp F11        &kp BACKSPACE
+&kp TAB         &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &kp JP_CARET  &to 0              &kp EXCLAMATION     &kp F9               &kp LS(N7)       &kp RS(COLON)  &kp SEMICOLON  &kp JP_LBRACKET
+&kp LEFT_SHIFT  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp JP_PIPE   &kp CAPS           &kp QUESTION        &kp F10              &kp PRINTSCREEN  &kp LS(N8)     &kp LS(N9)     &kp JP_RBRACKET
+&kp LCTRL       &kp LESS_THAN     &kp GREATER_THAN  &kp GRAVE         &kp SPACE     &kp LS(SPACE)      &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                 &kp F12
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
