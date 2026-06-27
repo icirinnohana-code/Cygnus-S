@@ -29,10 +29,10 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <260>;
+    tapping-term-ms = <500>;
 };
 
-&lt { tapping-term-ms = <260>; };
+&lt { tapping-term-ms = <500>; };
 
 / {
     combos {
@@ -57,6 +57,8 @@
             #binding-cells = <0>;
             bindings = <&none &kp LS(M) &kp O &kp K &kp K &kp U &kp N &kp N8 &kp N2 &kp LS(P) &kp O &kp K &kp E &kp G &kp O>;
             label = "LOGIN_1";
+            wait-ms = <0>;
+            tap-ms = <1>;
         };
 
         Login2: Login2 {
@@ -64,6 +66,8 @@
             #binding-cells = <0>;
             bindings = <&none &kp N0 &kp N1 &kp N4 &kp N5 &kp N3 &kp N6>;
             label = "LOGIN2";
+            wait-ms = <0>;
+            tap-ms = <1>;
         };
 
         system_yes: system_yes {
@@ -165,10 +169,10 @@
 
         default_layer {
             bindings = <
-&lt 2 Q           &kp W         &kp E         &kp R                &kp T                                                             &kp Y               &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &lt 3 F              &kp G                &mkp MCLK                  &kp GRAVE         &kp H               &kp J  &kp K      &lt 5 L  &lt 4 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                &kp B                &lt 6 INTERNATIONAL_5      &kp SPACE         &kp N               &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &layer_mouse 1 LCLK  &layer_mouse 3 RCLK  &layer_mouse 5 MCLK        &lt 2 INT_HENKAN  &layer_mouse 3 MB1                             &kp RET
+&lt 2 Q           &kp W         &kp E         &kp R                &kp T                                                             &kp Y               &kp U    &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &lt 3 F              &kp G                &mkp MCLK                  &kp GRAVE         &kp H               &lt 3 L  &kp K      &lt 5 L  &lt 4 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                &kp B                &lt 6 INTERNATIONAL_5      &kp SPACE         &kp N               &kp M    &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &layer_mouse 1 LCLK  &layer_mouse 3 RCLK  &layer_mouse 5 MCLK        &lt 2 INT_HENKAN  &layer_mouse 3 MB1                               &kp RET
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
