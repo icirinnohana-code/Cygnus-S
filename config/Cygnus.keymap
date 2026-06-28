@@ -29,10 +29,10 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <500>;
+    tapping-term-ms = <260>;
 };
 
-&lt { tapping-term-ms = <500>; };
+&lt { tapping-term-ms = <260>; };
 
 / {
     combos {
@@ -101,7 +101,7 @@
         new_folder: new_folder {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp RCLK &kp W &kp F &kp LC(V) &kp RET>;
+            bindings = <&mkp RCLK &kp W &kp F &kp LC(V)>;
             label = "NEW_FOLDER";
         };
 
@@ -169,10 +169,10 @@
 
         default_layer {
             bindings = <
-&lt 2 Q           &kp W         &kp E         &kp R                &kp T                                                             &kp Y               &kp U    &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &lt 3 F              &kp G                &mkp MCLK                  &kp GRAVE         &kp H               &lt 3 L  &kp K      &lt 5 L  &lt 4 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                &kp B                &lt 6 INTERNATIONAL_5      &kp SPACE         &kp N               &kp M    &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &layer_mouse 1 LCLK  &layer_mouse 3 RCLK  &layer_mouse 5 MCLK        &lt 2 INT_HENKAN  &layer_mouse 3 MB1                               &kp RET
+&lt 2 Q           &kp W         &kp E                      &kp R                &kp T                                                             &kp Y               &kp U    &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D                      &lt 3 F              &kp G                &mkp MCLK                  &kp GRAVE         &kp H               &lt 3 J  &kp K      &lt 5 L  &lt 4 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C                      &kp V                &kp B                &lt 6 INTERNATIONAL_5      &kp SPACE         &kp N               &kp M    &kp COMMA  &kp DOT  &mt LEFT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &mt LEFT_ALT INT_MUHENKAN  &layer_mouse 1 LCLK  &layer_mouse 3 RCLK  &layer_mouse 5 MCLK        &lt 2 INT_HENKAN  &layer_mouse 3 MB1                               &kp RET
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -227,7 +227,7 @@
 &kp LA(F4)   &kp LC(A)      &kp LC(Z)  &kp LC(Y)           &kp LA(LC(F))                                            &kp RC(J)    &kp LA(TAB)     &kp LG(TAB)    &kp LG(P)           &kp JP_AT
 &kp LA(TAB)  &kp LC(X)      &kp LC(C)  &kp LC(V)           &system_yes    &mkp MCLK                &kp RC(W)        &kp RC(Q)    &mkp MCLK       &Login_1       &kp LA(LC(DELETE))  &kp JP_LBRACKET
 &kp LG(TAB)  &kp LC(LS(V))  &kp LC(U)  &kp LC(Q)           &system_none   &trans                   &kp RC(G)        &kp RC(M)    &mail_furiwake  &kp RC(RS(X))  &kp RC(P)           &kp JP_RBRACKET
-&kp LA(N5)   &kp LC(S)      &kp LC(T)  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &kp LS(LC(TAB))  &kp LC(TAB)                                                     &kp F12
+&kp LA(N5)   &kp LC(S)      &kp LC(L)  &kp LG(LEFT_ARROW)  &kp LG(D)      &kp LG(RIGHT_ARROW)      &kp LS(LC(TAB))  &kp LC(TAB)                                                     &kp F12
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
